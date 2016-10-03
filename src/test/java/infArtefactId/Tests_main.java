@@ -14,7 +14,6 @@ public class Tests_main {
 		 driver.manage().window().maximize();
 		driver.get("https://www.surveymonkey.com");
 		driver.findElementByXPath("//a[@class='sign-in']").click();
-		driver.close();
 	}
 
 }
