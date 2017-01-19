@@ -13,7 +13,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class Tests_main {
 	 public static RemoteWebDriver driver;
 	@BeforeClass
-	public void init(){
+	public static void init(){
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 	}
@@ -33,8 +33,7 @@ public class Tests_main {
 		Assert.assertTrue("Hamburger menu is disabled!",menu.isEnabled());
 		menu.click();
 		
-		List<WebElement> hamburgerContent = driver.findElementsByXPath("//ul[@class='INF-mainMenu_link']/li/a");
-		
+		List<WebElement> hamburgerContent = driver.findElementsByXPath("//ul[@class='INF-mainMenu_link']/li/a");		
 	}
 
 }
